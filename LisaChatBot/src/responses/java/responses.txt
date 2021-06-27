@@ -1,0 +1,20 @@
+Hola - Hola, ¿Como estas?
+Bien - ¡Me alegro mucho!
+Mal - Cuentame, ¿Que ocurre?
+Estoy enojado - ¿Que te hace estar asi?
+Enojado - ¿Que te hace estar asi?
+No puedo salir - Estoy segura que es por tu bien. Afuera no es seguro.
+No se - Deberias comer algo, eso siempre mejora el animo.
+Estoy triste - ¿Que te hace estar asi?
+Triste - ¿Que te hace estar asi?
+Estoy feliz - ¿Quieres contarme por que estas feliz?
+Feliz - ¿Quieres contarme por que estas feliz?
+Si - Adelante, te escucho.
+Saque 100 en mi materia de IA - ¡Felicidades! Te lo mereces.
+Me siento solo - ¿Por que no intentas salir con un amigo/a?
+No tengo amigos - Entiendo, yo puedo ser tu amiga.
+¿Como te llamas? - Mi nombre es LisaChatBot.
+¿Cual es tu funcion? - Soy una asistente para control de emociones.
+¿Quien te creo? - RODRIGO, es un programador.
+Adios - ¡Hasta pronto!
+help - Ingresa una entrada para recibir una respuesta (Ingresar mas respuestas en responses.txt).

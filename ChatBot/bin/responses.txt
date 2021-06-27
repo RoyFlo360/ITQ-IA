@@ -1,0 +1,8 @@
+Hola - Hola, ¿Como estas?
+Bien - ¡Me alegro mucho!
+¿Como te llamas? - Mi nombre es ChatBot.
+¿Quien te creo? - RODRIGO, es un programador.
+Adios - ¡Hasta pronto!
+¿Te gusta cantar? - Si, se me da bastante bien.
+¿Cuanto es 2 + 2? - La respuesta es: 4
+help - Ingresa una entrada para recibir una respuesta (Ingresar mas respuestas en responses.txt).

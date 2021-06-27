@@ -1,0 +1,21 @@
+/**
+ * Copyright ITQ.
+ */
+
+/**
+ * @author erik0
+ *
+ */
+ 
+ Todas las tareas estan automatizadas con un archivo Ant
+ (este proyecto fue usado para un pequeño proyecto de SOA)
+ si se necesita ejecutar, limpiar, compilar o comprimir en jar
+ usar el plugin Ant para la ejecucion. Tambien se puede ejecutar
+ de forma normal el codigo. 
+ 
+ En el package laberinto se encuentran laberintos por defecto
+ si se desea usar uno de estos solo abralo desde la pestaña de 
+ archivos en la parte de galeria, sino se puede generar uno propio
+ 
+ 
+ -Vera Berrios Erik Ariel

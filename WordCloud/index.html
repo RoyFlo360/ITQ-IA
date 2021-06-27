@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>JavaScript Tag Cloud Chart</title>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+  <style>
+    html, body, #container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+  </style> 
+ </head>
+  <body>
+   <div id="container"></div>
+
+   <form enctype="multipart/form-data">
+       <input id="upload" type=file   accept="text/html/json" name="files[]" size=30>
+   </form>
+   
+</body>
+<script>
+function handleFileSelect(evt) {
+    var files = evt.target.files;
+    let f = files[0];
+    var reader = new FileReader();
+    reader.onload = (function(theFile) { 
+        return function(e) {
+            init(e.target.result);
+        };
+    })(f);
+    reader.readAsText(f);
+}
+document.getElementById('upload').addEventListener('change', handleFileSelect, false);
+
+
+let takenAccount = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz';
+
+let wordsScore = {};
+
+function init(value){
+    //console.log(value);
+    count(value);
+    let unsortedResults = [];
+    for(let key in wordsScore) unsortedResults.push({x: key, value: wordsScore[key]});
+    sortedResults = unsortedResults.sort((s1, s2) => {
+        return -s1.value + s2.value;
+    });
+    //for(let val of sortedResults) console.log(val);
+    let arr = [];
+    for(let i = 0; i < 100; i++) arr[i] = sortedResults[i];
+    drawCloud(arr);
+}
+
+
+//count and save in wordsScore
+function count(fileContent){
+    let buffer = '';
+    for(let i = 0; i < fileContent.length; i++){
+        if(takenAccount.includes(fileContent[i])){
+            buffer += fileContent[i];
+        }else{
+            if(buffer && buffer.length > 5) wordsScore[buffer] = (wordsScore[buffer] || 0) + 1;
+            buffer = '';
+        }
+    }
+}
+
+function drawCloud(data){
+
+    // create a tag (word) cloud chart
+    var chart = anychart.tagCloud(data);
+
+    // set a chart title
+    chart.title('15 most spoken languages')
+    // set an array of angles at which the words will be laid out
+    chart.angles([0])
+    // enable a color range
+    chart.colorRange(true);
+    // set the color range length
+    chart.colorRange().length('80%');
+
+    // display the word cloud chart
+    chart.container("container");
+    chart.draw();
+    }
+</script>
+</html>
